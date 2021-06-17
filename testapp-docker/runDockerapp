@@ -1,0 +1,7 @@
+# to build and run docker file 
+
+    ~$ docker build -t testapp-docker .
+
+    ~$ docker run -dp 3000:3000 testdocker-app
+
+    ~$ docker run testapp-docker
