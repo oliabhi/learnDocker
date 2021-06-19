@@ -1,0 +1,21 @@
+ ubuntu x docker :
+
+	\_ interactive ubuntu session using docker 
+
+		 ~$ docker pull ubuntu 
+		 ~$ docker run -it imageID
+		 	#this gets you inside terminal
+				~$ apt install php
+				# above process installs php on ubuntu
+			# restart container
+			 # this wont be interactive
+				~$ docker start Container_id
+				~$
+			# for interactive
+				~$ docker exec -it container id /bin/bash
+				#inside container (interactive)
+				~$ exit
+ 
+			# stop a container
+			
+				~$docker stop container_id		
