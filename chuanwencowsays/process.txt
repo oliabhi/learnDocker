@@ -1,0 +1,6 @@
+docker pull chuanwen/cowsay
+
+docker build -t="chuanwen/cowsay"
+
+docker run chuanwen/cowsay
+
