@@ -1,0 +1,16 @@
+version: '3'
+services:
+  mysql-db:
+    image: mysql:5.7
+    hostname: mysql-db
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'mydb'
+      MYSQL_USER: 'user1'
+      MYSQL_PASSWORD: 'user123@'
+      MYSQL_ROOT_PASSWORD: 'linux123@'
+    volumes:
+      - my-db-volume:/var/lib/mysql
+volumes:
+  my-db-volume:
