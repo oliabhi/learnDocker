@@ -1,0 +1,46 @@
+#install docker following these steps :
+
+# Download DOCKER DESKTOP APP or FOR CLI follow below steps : 
+
+	~$ brew install docker
+	post installation	
+	~$ docker version
+	~$ docker Engine - Community
+
+#dockerising any app :
+
+	~$ docker run .. (running app in a container)
+		\_ asking docker to run the app in a container
+		\_ package the app and run it anywhere with docker
+
+#workflow for docker:
+	~$ mdkir test-docker
+	~$ cd test-docker
+	~$ touch index.html
+	~$ vim index.html
+	\_ <html>
+		<head>
+		</head>
+		<body>Hi! "You did it , your first docker app is up"</body>
+		</head>
+	~$touch Dockerfile
+	~$ vim Dockerfile
+		\_ FROM packageName:
+		\_ COPY . /app
+		\_ WORKDIR /app
+		\_ CMD packageName index.html
+ 
+	~$ docker build -t test-docker .
+
+#to check build images :
+	~$ docker image ls
+
+#running the docker image : 
+	~$ docker run test-docker
+
+#run app in labs.play-with-docker
+	~$ login in dockerhub
+	~$ docker version
+	~$ docker pull test-docker
+	~$ docker image ls
+	~$ docker run test-docker
